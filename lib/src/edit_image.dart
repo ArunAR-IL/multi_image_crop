@@ -129,7 +129,7 @@ class _EditImageState extends State<EditImage> {
       elevation: 0,
       backgroundColor: CustomColors.primaryColor,
       leading: IconButton(
-        icon: const Icon(CupertinoIcons.clear, color: Colors.white),
+        icon: const Icon(Icons.clear, color: Colors.white),
         onPressed: () {
           Navigator.pop(context);
         },
@@ -172,7 +172,7 @@ class _EditImageState extends State<EditImage> {
           mainAxisAlignment: MainAxisAlignment.spaceAround,
           children: [
             CustomIconButton(
-              icon: CupertinoIcons.crop_rotate,
+              icon: Icons.crop_rotate,
               inActiveColor: CustomColors.secondaryColor,
               activeColor: widget.activeColor ?? CustomColors.activeColor,
               toolTip: 'Transform',
@@ -181,7 +181,7 @@ class _EditImageState extends State<EditImage> {
                   setState(() => _selectedAction = ActionType.transform),
             ),
             CustomIconButton(
-              icon: CupertinoIcons.color_filter,
+              icon: Icons.photo_filter,
               inActiveColor: CustomColors.secondaryColor,
               activeColor: widget.activeColor ?? CustomColors.activeColor,
               toolTip: 'Filters',
@@ -189,7 +189,7 @@ class _EditImageState extends State<EditImage> {
               onTap: () => setState(() => _selectedAction = ActionType.filters),
             ),
             CustomIconButton(
-              icon: CupertinoIcons.textbox,
+              icon: Icons.text_format,
               inActiveColor: CustomColors.secondaryColor,
               activeColor: widget.activeColor ?? CustomColors.activeColor,
               toolTip: 'Text',
@@ -264,7 +264,7 @@ class _EditImageState extends State<EditImage> {
                 mainAxisSize: MainAxisSize.min,
                 children: [
                   CustomIconButton(
-                    icon: CupertinoIcons.rotate_right,
+                    icon: Icons.rotate_right,
                     inActiveColor: CustomColors.secondaryColor,
                     activeColor: widget.activeColor ?? CustomColors.activeColor,
                     toolTip: 'Rotate',
@@ -303,7 +303,7 @@ class _EditImageState extends State<EditImage> {
                     },
                   ),
                   CustomIconButton(
-                    icon: CupertinoIcons.chevron_left_slash_chevron_right,
+                    icon: Icons.flip,
                     inActiveColor: CustomColors.secondaryColor,
                     activeColor: widget.activeColor ?? CustomColors.activeColor,
                     toolTip: 'Flip Horizontal',

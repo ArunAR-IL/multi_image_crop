@@ -119,8 +119,8 @@ class _MultiImageCropServiceState extends State<MultiImageCropService>
       elevation: 0,
       backgroundColor: CustomColors.primaryColor,
       leading: IconButton(
-        icon: Icon(
-          isIos ? CupertinoIcons.back : Icons.arrow_back,
+        icon: const Icon(
+          Icons.arrow_back,
           color: Colors.white,
         ),
         onPressed: () {
@@ -272,7 +272,7 @@ class _MultiImageCropServiceState extends State<MultiImageCropService>
             activeColor: CustomColors.secondaryColor,
             isActive: false,
             inActiveColor: CustomColors.secondaryColor,
-            icon: isIos ? CupertinoIcons.delete : Icons.delete,
+            icon: Icons.delete,
           ),
           CustomIconButton(
             onTap: () {
@@ -308,7 +308,7 @@ class _MultiImageCropServiceState extends State<MultiImageCropService>
             activeColor: CustomColors.secondaryColor,
             isActive: false,
             inActiveColor: CustomColors.secondaryColor,
-            icon: isIos ? CupertinoIcons.pencil : Icons.edit,
+            icon: Icons.edit,
           ),
           CustomIconButton(
             onTap: () => cropImage().then((value) {
