@@ -142,9 +142,7 @@ class _MultiImageCropServiceState extends State<MultiImageCropService>
             controller: _pageController,
             itemCount: files.length,
             preloadPagesCount: files.length,
-            physics: files.length > 1
-                ? const AlwaysScrollableScrollPhysics()
-                : const NeverScrollableScrollPhysics(),
+            physics: const NeverScrollableScrollPhysics(),
             onPageChanged: (page) async {
               await _autoScrollController!.scrollToIndex(
                 page,
@@ -191,8 +189,8 @@ class _MultiImageCropServiceState extends State<MultiImageCropService>
                 controller!.reverse();
                 _pageController.animateToPage(
                   index,
-                  duration: const Duration(seconds: 1),
-                  curve: Curves.linearToEaseOut,
+                  duration: const Duration(milliseconds: 1),
+                  curve: Curves.linear,
                 );
               },
               child: Container(
@@ -273,42 +271,6 @@ class _MultiImageCropServiceState extends State<MultiImageCropService>
             isActive: false,
             inActiveColor: CustomColors.secondaryColor,
             icon: Icons.delete,
-          ),
-          CustomIconButton(
-            onTap: () {
-              Navigator.push(
-                context,
-                FadePageRoute(
-                  fullscreenDialog: true,
-                  builder: (_) => EditImage(
-                    image: files[currentPage],
-                    pixelRatio: widget.pixelRatio,
-                    activeColor: widget.activeColor ?? CustomColors.activeColor,
-                    onFiltered: (imageMemory) async {
-                      final buffer = imageMemory.buffer;
-                      await File(files[currentPage].path).writeAsBytes(
-                        buffer.asUint8List(
-                          imageMemory.offsetInBytes,
-                          imageMemory.lengthInBytes,
-                        ),
-                      );
-                      if (kDebugMode) {
-                        print('Filter applied successfully...');
-                      }
-                      imageCache.clearLiveImages();
-                      imageCache.clear();
-                      setState(() {});
-                    },
-                  ),
-                ),
-              );
-            },
-            toolTip: 'Edit',
-            labelText: 'Edit',
-            activeColor: CustomColors.secondaryColor,
-            isActive: false,
-            inActiveColor: CustomColors.secondaryColor,
-            icon: Icons.edit,
           ),
           CustomIconButton(
             onTap: () => cropImage().then((value) {
