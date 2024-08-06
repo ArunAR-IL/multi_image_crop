@@ -144,15 +144,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "4.0.2"
-  image_crop:
+  image_crop_plus:
     dependency: transitive
     description:
-      path: "."
-      ref: HEAD
-      resolved-ref: cc05a5055038b0679ef4006720724b970b0d6b42
-      url: "https://github.com/tsafundzic/image_crop.git"
-    source: git
-    version: "0.4.1"
+      name: image_crop_plus
+      sha256: "7e9f0cdf145e506ac25779f876c4a1e4295aaf409c92d7897d8ed8357c45470f"
+      url: "https://pub.dev"
+    source: hosted
+    version: "1.0.0"
   image_picker:
     dependency: "direct dev"
     description:

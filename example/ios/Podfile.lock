@@ -1,26 +1,26 @@
 PODS:
   - Flutter (1.0.0)
-  - image_crop (0.0.1):
+  - image_crop_plus (0.0.1):
     - Flutter
   - image_picker_ios (0.0.1):
     - Flutter
 
 DEPENDENCIES:
   - Flutter (from `Flutter`)
-  - image_crop (from `.symlinks/plugins/image_crop/ios`)
+  - image_crop_plus (from `.symlinks/plugins/image_crop_plus/ios`)
   - image_picker_ios (from `.symlinks/plugins/image_picker_ios/ios`)
 
 EXTERNAL SOURCES:
   Flutter:
     :path: Flutter
-  image_crop:
-    :path: ".symlinks/plugins/image_crop/ios"
+  image_crop_plus:
+    :path: ".symlinks/plugins/image_crop_plus/ios"
   image_picker_ios:
     :path: ".symlinks/plugins/image_picker_ios/ios"
 
 SPEC CHECKSUMS:
   Flutter: e0871f40cf51350855a761d2e70bf5af5b9b5de7
-  image_crop: e0a67085d3ebf3cf46ca46d61c53a082507b0bc3
+  image_crop_plus: 586881ad8752d6f0f3231223293b2db4aff892b6
   image_picker_ios: c560581cceedb403a6ff17f2f816d7fea1421fc1
 
 PODFILE CHECKSUM: c4c93c5f6502fe2754f48404d3594bf779584011

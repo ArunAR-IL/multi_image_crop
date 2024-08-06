@@ -2,7 +2,7 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'dart:io';
 import 'package:flutter/cupertino.dart';
-import 'package:image_crop/image_crop.dart';
+import 'package:image_crop_plus/image_crop_plus.dart';
 import 'package:multi_image_crop/src/common/util/colors.dart';
 import 'package:multi_image_crop/src/common/util/fade_page_route.dart';
 import 'package:multi_image_crop/src/edit_image.dart';
@@ -159,6 +159,7 @@ class _MultiImageCropServiceState extends State<MultiImageCropService>
                 key: cropKeyList[index],
                 alwaysShowGrid: widget.alwaysShowGrid,
                 aspectRatio: widget.aspectRatio,
+                maximumScale: 1.0,
               );
             },
           ),
